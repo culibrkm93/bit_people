@@ -4,7 +4,7 @@ import { UserList } from './UserList'
 const Main = (props) => {
     return (
         <main>
-            <UserList users={props.allUsers} />
+            <UserList layout={props.layout} users={props.allUsers} />
         </main>
     )
 };

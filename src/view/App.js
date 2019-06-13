@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer'
 import { Main } from './Main';
-import { listOfAllUsers } from '../shared/listOfAllUsers'
 import { data } from '../service/UserService'
 
 
@@ -11,13 +10,16 @@ class App extends React.Component {
         super(props);
         this.state = {
             users: [],
+            layout: "list"
         }
-        this.componentDidMount(
-            data()
-                .then(users => this.state = {
-                    users: users
-                })
-        )
+    }
+
+    componentDidMount() {
+        data()
+            .then(users => this.setState({
+                users: users
+            }))
+
     }
 
 
@@ -25,8 +27,12 @@ class App extends React.Component {
 
         return (
             <React.Fragment>
-                <Header />
-                <Main allUsers={listOfAllUsers[0].results} />
+                <Header layout={this.state.layout} />
+                {/* <div className="dugmici">
+                    <button className="elButton cards">Cards</button>
+                    <button className="elButton list">List</button>
+                </div> */}
+                <Main allUsers={this.state.users} layout={this.state.layout} />
                 <Footer />
             </React.Fragment >
         )
