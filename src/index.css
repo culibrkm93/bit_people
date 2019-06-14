@@ -113,3 +113,29 @@
     font-size: 25px;
     outline: none;
   }
+button:hover{
+  background-color: #D5646A;
+  cursor: pointer;
+}
+
+.red {
+  background-color: #ffebee;
+}
+.search-bar{
+  margin: 20px auto;
+  width: 80%;
+}
+
+.search-bar i{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.search{
+  margin: 20px auto;
+  width: 98.9%;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+}

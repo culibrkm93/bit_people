@@ -5,7 +5,12 @@ class User {
         this.email = userObj.email;
         this.dob = new Date(userObj.dob.date);
         this.photo = userObj.picture;
+        this.gender = userObj.gender;
 
+    }
+
+    isFemale() {
+        return this.gender === 'female'
     }
 
     hideEmail() {
@@ -26,7 +31,12 @@ class User {
             return (`${day}.0${month}.${year}`)
         } else if (month > 10 && day < 10) {
             return (`0${day}.${month}.${year}`)
-        } else {
+        } else if (month === 10 && day < 10) {
+            return (`0${day}.${month}.${year}`)
+        } else if (month < 10 && day === 10) {
+            return (`${day}.0${month}.${year}`)
+        }
+        else {
             return (`${day}.${month}.${year}`)
         }
     }
