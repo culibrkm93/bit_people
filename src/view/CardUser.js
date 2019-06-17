@@ -7,7 +7,7 @@ const CardUser = (props) => {
     return (
         <section className={`single-card-user ${color}`} >
             <div className={`thumbnail`} ><img className="img" src={user.photo.large} alt="slicica" /></div>
-            <p className="name">{user.name.first}</p>
+            <p className="name">{user.formatFirstName()}</p>
             <p className="mail">{user.hideEmail()}</p>
             <p className="dob">Birth date: {user.formatDate()}</p>
         </section >

@@ -24,7 +24,6 @@
   margin: 10px;
   background: none;
   border-radius: 10px;
-  
 }
 
 .header{
@@ -34,6 +33,7 @@
   box-shadow: 0px 4px 5px 0px rgba(140,140,140,1);
   text-align: center;
   margin-bottom: 15px;
+  height: 67px;
 }
 
 .footer{
@@ -41,8 +41,8 @@
   color: white;
   padding: 15px 0;
   margin-top: 15px;
-  position: relative;
-  bottom: 0;
+  flex-shrink: 0;
+  height: 48px;
 }
 .footer p{
   display: block;
@@ -57,8 +57,8 @@
   float: left;
   box-shadow: 0px 4px 5px 0px rgba(140,140,140,1);
   border-radius: 25px 25px 0 0;
-
 }
+
 .single-list-user{
   border: 1px solid lightgray;
   width: 100%;
@@ -94,6 +94,7 @@
 .whole-list{
   width: 80%;
   margin: 0 auto;
+  min-height: calc(100vh - 235px);
 }
 
 .img{
@@ -101,20 +102,25 @@
   border-radius: 25px 25px 0 0;
   }
 
-  .buttons{
+.buttons{
     position: absolute;
     right: 11%;
     top: 1%;
-  }
-  .buttons button{
-    padding: 5px 20px 5px 20px;
-    margin: 5px;
-    background-color:transparent;
-    border: none;
-    color: white;
-    font-size: 25px;
-    outline: none;
-  }
+}
+h3{
+display: inline;
+margin-right: 20px;
+}
+
+.buttons button{
+  padding: 5px 20px 5px 20px;
+  margin: 5px;
+  background-color:transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  outline: none;
+}
 button:hover{
   background-color: #D5646A;
   cursor: pointer;
@@ -142,16 +148,47 @@ button:hover{
   border-bottom: 1px solid lightgrey;
 }
 
+.about-holder {
+  width: 80%;
+  margin: auto;
+  min-height: calc(100vh - 195px);
+}
+.about-holder h1{
+  margin-top: 30px;
+  font-size: 45px;
+}
+
+.about-holder h3{
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.about-holder p{
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+.link-to:link,
+.link-to:active,
+.link-to:hover,
+.link-to:visited{
+  color: white;
+  text-decoration: none;
+}
+.cube{
+  min-height: calc(100vh - 715px);
+}
+
 .sk-cube-grid {
   width: 200px;
   height: 200px;
-  margin: 200px auto;
+  margin: 300px auto;
 }
 
 .sk-cube-grid .sk-cube {
   width: 33%;
   height: 33%;
-  background-color: #ec6f75;
+  background-color:  #ec6f75;
   float: left;
   -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
           animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
@@ -202,4 +239,17 @@ button:hover{
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1);
   } 
+}
+
+.no-users{
+  text-align: center;
+  margin: 300px auto;
+}
+.no-users h1{
+  font-size: 80px;
+  color: grey;
+}
+.no-users p{
+  font-size: 40px;
+  color: grey;
 }

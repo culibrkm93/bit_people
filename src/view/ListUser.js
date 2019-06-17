@@ -6,7 +6,7 @@ const ListUser = (props) => {
     return (
         <section className={`single-list-user ${color}`}>
             <div className="thumb-img"><img className="round-img" src={user.photo.thumbnail} alt="slicica" /></div>
-            <p className="list-name">{user.name.first} {user.name.last}</p>
+            <p className="list-name">{user.formatFirstName()} {user.formatLastName()}</p>
             <p><i className="fas fa-envelope"></i>email:{user.hideEmail()}</p>
             <p className="dob"><i className="fas fa-birthday-cake"></i> {user.formatDate()}</p>
         </section>

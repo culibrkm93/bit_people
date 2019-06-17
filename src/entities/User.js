@@ -8,6 +8,18 @@ class User {
         this.gender = userObj.gender;
 
     }
+    formatFirstName() {
+        const firstLetterOfFirstName = this.name.first.slice(0, 1).toUpperCase();
+        const restOfFirstName = this.name.first.slice(1, this.name.first.length);
+        const firstName = firstLetterOfFirstName + "" + restOfFirstName;
+        return firstName
+    }
+    formatLastName() {
+        const firstLetterOfLastName = this.name.last.slice(0, 1).toUpperCase();
+        const restOfLastName = this.name.last.slice(1, this.name.last.length);
+        const lastName = firstLetterOfLastName + "" + restOfLastName;
+        return lastName
+    }
 
     isFemale() {
         return this.gender === 'female'
